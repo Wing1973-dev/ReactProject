@@ -1,0 +1,12 @@
+.arrow {
+    display: inline-block;
+    vertical-align: middle;
+    width: 24px;
+    height: 24px;
+    border: 1px solid transparent;
+    background-color: transparent;
+}
+
+.arrow:hover {
+    border: 1px solid #ffffff;
+}
