@@ -130,26 +130,6 @@ header .container {
     align-items: center;
 }
 
-/*.tabs_item {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 140px;
-    padding-right: 140px;
-}
-
-.tabs_item:hover {
-    background-color: #2F80ED;
-}
-
-.tabs_item.active {
-    background-color: #2F80ED;
-    border-bottom: 8px solid #FFFFFF;
-}*/
-
 i {
     font-size: 50px;
     margin-bottom: 15px;

@@ -9,20 +9,19 @@ function Tabs() {
     ]);
 
     function ChangeCurrentTabitem(e) {
-        
-        for (const tab of tabsHints) {
+        const temptabsHints = [...tabsHints];
+
+        for (const tab of temptabsHints) {
             tab.isActive = false;
         }
 
-        const current = tabsHints.find(item => item.id == e.target.id);
+        const current = temptabsHints.find(item => item.id == e.target.id);
         current.isActive = true;
 
-        const indexCurrent = tabsHints.findIndex(item => item.id == e.target.id);
-        tabsHints[indexCurrent] = current;
+        const indexCurrent = temptabsHints.findIndex(item => item.id == e.target.id);
+        temptabsHints[indexCurrent] = current;
 
-        setTabsHints(tabsHints);
-
-        console.log(current);
+        setTabsHints(temptabsHints);
     }
 
     return (

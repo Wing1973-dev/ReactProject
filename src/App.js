@@ -29,24 +29,25 @@ function App() {
                 
         setResultsCount(`of ${getRandomInRange(10, 300)} products`);
         
-        for (const button of buttonsHints) {
+        const tempButtonsHints = [...buttonsHints];
+
+        for (const button of tempButtonsHints) {
             button.isCurrent=false;
         }
 
-        const current = buttonsHints.find(item => item.id == e.target.id);
+        const current = tempButtonsHints.find(item => item.id == e.target.id);
         current.isCurrent = true;
 
-        const indexCurrent = buttonsHints.findIndex(item => item.id == e.target.id);
-        buttonsHints[indexCurrent] = current;
+        const indexCurrent = tempButtonsHints.findIndex(item => item.id == e.target.id);
+        tempButtonsHints[indexCurrent] = current;
 
-        setbuttonsHints(buttonsHints);
+        setbuttonsHints(tempButtonsHints);
         
     } 
 
     function getRandomInRange(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
-
     
     return (
         <div >
